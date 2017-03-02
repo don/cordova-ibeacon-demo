@@ -121,11 +121,10 @@ var app = {
 
         };
 
-
-        var uuid = '11111111-1111-1111-1111-111111111111';
+        var uuid = '12345678-aaaa-bbbb-cccc-123456789abc';
         var identifier = 'ibeacon';
-        var minor = 1000;
-        var major = 5;
+        var major = 1;
+        var minor = 10;
         var beaconRegion = new cordova.plugins.locationManager.BeaconRegion(identifier, uuid, major, minor);
 
         cordova.plugins.locationManager.setDelegate(delegate);
