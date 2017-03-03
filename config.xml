@@ -23,4 +23,8 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
+    <plugin name="cordova-plugin-ble-central" spec="~1.1.4">
+        <variable name="BLUETOOTH_USAGE_DESCRIPTION" value=" " />
+    </plugin>
+    <plugin name="com.unarin.cordova.beacon" spec="~3.4.0" />
 </widget>
