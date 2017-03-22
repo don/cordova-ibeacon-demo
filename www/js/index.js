@@ -13,9 +13,13 @@ var app = {
     var identifier = 'ibeacon';
     var major = 1;
     var minor = 10;
-    var beaconRegion = new cordova.plugins.locationManager.BeaconRegion(identifier, uuid, major, minor);
+    var beaconRegion = new cordova.plugins.locationManager.BeaconRegion(identifier, uuid, major, minor, true);
 
     var delegate = new cordova.plugins.locationManager.Delegate();
+
+    delegate.didDetermineStateForRegion = function (pluginResult) {
+      console.log(pluginResult);
+    };
 
     delegate.didEnterRegion = function (/*pluginResult*/) {
       regionDiv.innerText = 'Inside Region';
