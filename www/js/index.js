@@ -45,7 +45,7 @@ var app = {
     };
 
     cordova.plugins.locationManager.setDelegate(delegate);
-    cordova.plugins.locationManager.requestAlwaysAuthorization();
+    cordova.plugins.locationManager.requestWhenInUseAuthorization();
 
     cordova.plugins.locationManager.startMonitoringForRegion(beaconRegion)
       .fail(function (e) { console.error(e); })
