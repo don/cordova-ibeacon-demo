@@ -50,8 +50,8 @@ var app = {
     };
 
     cordova.plugins.locationManager.setDelegate(delegate);
-    //cordova.plugins.locationManager.requestAlwaysAuthorization();
-    cordova.plugins.locationManager.requestInUseAuthorization();
+    cordova.plugins.locationManager.requestAlwaysAuthorization();
+    //cordova.plugins.locationManager.requestInUseAuthorization();
 
     cordova.plugins.locationManager.startMonitoringForRegion(beaconRegion)
       .fail(function (e) { console.error(e); })
@@ -73,7 +73,7 @@ var app = {
   },
   disconnect: function() {
     if (app.peripheral) {
-      app.peripheral.disconnect();
+      ble.disconnect(app.peripheral.id);
     }
   },
   updateColor: function (proximity) {
